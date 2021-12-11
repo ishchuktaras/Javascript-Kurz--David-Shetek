@@ -1,31 +1,17 @@
-/********************
-	Základní operatory
-*/ 
 
 var ageTaras = 40;
 var ageMarta = 30;
 
-var birthdayTaras = 2021 - 40;
-var birthdayMarta = 2021 - 30;
+if (3 > 4) {
+	// podminka je True = pravda
+	console.log("Je to pravda.");
+} else {
+	// podminka je False = nepravda
+	console.log("Neni to pravda.");
+}
 
-console.log(birthdayTaras);
-console.log(birthdayMarta);
-
-console.log(birthdayMarta / 2);
-console.log(birthdayMarta * 2);
-console.log(birthdayMarta + 300);
-console.log(birthdayMarta - 500);
-console.log(birthdayMarta * 2 - 800);
-
-console.log(5 + 10 * 5 + 10);
-
-/********************
-	Logické operatory
-*/ 
-
-// <  >  <==  ==>  ==
-
-var result = ageTaras > ageMarta;
-console.log(result);
-
-
+if (ageTaras > ageMarta)  {
+	console.log("Taras je starší než Marta.");
+} else {
+	console.log("Marta je starší než Taras.");
+}
