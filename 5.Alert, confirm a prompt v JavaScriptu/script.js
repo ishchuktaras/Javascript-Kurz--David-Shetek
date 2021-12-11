@@ -1,0 +1,1 @@
+alert("Ahoj, ja jsem Taras!");
