@@ -19,4 +19,13 @@ console.log(birthdayMarta * 2 - 800);
 
 console.log(5 + 10 * 5 + 10);
 
+/********************
+	Logické operatory
+*/ 
+
+// <  >  <==  ==>  ==
+
+var result = ageTaras > ageMarta;
+console.log(result);
+
 
