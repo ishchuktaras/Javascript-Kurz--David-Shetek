@@ -12,3 +12,6 @@ if (sign == "+") {
 } else {
 	console.log("Tutu matematickou operace nezmám.");
 }
+
+	console.log(typeof(Number("20"))); // Převod textu na čislo
+	console.log(typeof(String(20))); // Převod čisla na text
