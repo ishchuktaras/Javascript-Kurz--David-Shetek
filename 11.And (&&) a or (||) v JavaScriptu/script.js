@@ -26,7 +26,7 @@ if (ageTaras > 18 && ageTaras < 45){
 
 Jmenuji se Taras nebo jsem starší 18 let
 
-if(nameDavid == "David" || ageDavid > 18){
+if(nameTaras == "Taras" || ageTaras > 18){
 	// když jsou obě pravda
 	// když je alespoň jedna z nich pravda
 } else {
