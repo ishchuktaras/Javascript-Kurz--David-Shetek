@@ -15,7 +15,7 @@ calculateAge1 (1980);
 
 /* Výpočítáme věk pomocí return */
 
-function calculateAge1 (birth) {
+function calculateAge2 (birth) {
 	return 2020 - birth;
 }
 
