@@ -19,8 +19,8 @@ function calculateAge1 (birth) {
 	return 2020 - birth;
 }
 
-var ageDavid = calculateAge1 (2000);
-var ageDiana = calculateAge1 (1990);
-var ageMark = calculateAge1 (1980);
+var ageDavid = calculateAge2 (2000);
+var ageDiana = calculateAge2 (1990);
+var ageMark = calculateAge2 (1980);
 
 console.log(ageDavid, ageDiana, ageMark);
