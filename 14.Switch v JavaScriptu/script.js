@@ -17,3 +17,24 @@ switch (pet) {
 		console.log('Máme jine zviřatko');
 
 }
+
+var ageTaras = 40;
+
+// if (ageTaras >= 18) {
+	// console.log('Taras je dospělý');
+// } else if ('ageTaras <= 18 && ageTaras >= 8'){
+	// console.log('Taras je mladiství');
+// } else {
+	// console.log('Taras je ditě');
+// }
+
+	switch (true){
+		case ageTaras >= 18:
+			console.log('Taras je dospělý');
+			break;
+		case ageTaras <= 18 && ageTaras >= 8:
+			console.log('Taras je mladiství');
+			break;
+		default:
+			console.log('Taras je ditě');
+	}
