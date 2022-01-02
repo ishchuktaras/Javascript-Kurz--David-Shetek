@@ -17,3 +17,21 @@ if (salary || salary == 0){
 }else{
 	console.log('Hodnota je false')
 }
+
+// Rozdíl mezi == a === v porovnání v JavaScriptu
+
+var salary = 0;
+
+if (salary == 0){
+	console.log('Hodnota je true')
+}else{
+	console.log('Hodnota je false')
+}
+
+var salary = 0;
+
+if (salary === 0){
+	console.log('Hodnota je true')
+}else{
+	console.log('Hodnota je false')
+}
