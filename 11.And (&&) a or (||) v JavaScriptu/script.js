@@ -5,9 +5,9 @@
 // false = jmenuji se Petr a jsem z Prahy
 // false = jmenuji se Petr a jsem z Ostravy
 
-&& - zároveň
+// && - zároveň
 
-Jmenuji se Taras a zároveň jsem starší 18 let
+// Jmenuji se Taras a zároveň jsem starší 18 let
 
 if (ageTaras > 18 && ageTaras < 45){
 	// když obě dvě jsou pravdivé
@@ -22,9 +22,9 @@ if (ageTaras > 18 && ageTaras < 45){
 // true = jmenuji se Petr a jsem z Prahy
 // false = jmenuji se Petr a jsem z Ostravy
 
-|| - nebo
+// || - nebo
 
-Jmenuji se Taras nebo jsem starší 18 let
+// Jmenuji se Taras nebo jsem starší 18 let
 
 if(nameTaras == "Taras" || ageTaras > 18){
 	// když jsou obě pravda
