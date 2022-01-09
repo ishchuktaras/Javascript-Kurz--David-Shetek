@@ -2,7 +2,7 @@
 *    Array (Pole) 
 */
 
-var employees = ['David' ,'Jane', 'Diana'];
+var employees = ['David' ,'Jana', 'Diana'];
 
 /*
 	push - přidá na konec pole,
