@@ -10,7 +10,8 @@ var taras = {
     driveLicence: true,
     family: ['Matvii', 'Eva', 'Sofia', 'Angelina', 'Marta'],
     calculateAge: function() {
-        return 2022 - this.birthYear;
+        this.age = 2022 - this.birthYear;
     }
 }
-console.log(taras.calculateAge());
+taras.calculateAge();
+console.log(taras);
