@@ -9,8 +9,8 @@ var taras = {
     birthYear: '1981',
     driveLicence: true,
     family: ['Matvii', 'Eva', 'Sofia', 'Angelina', 'Marta'],
-    calculateAge: function(birthYear) {
-        return 2022 - birthYear;
+    calculateAge: function() {
+        return 2022 - this.birthYear;
     }
 }
-console.log(taras.calculateAge(1981));
+console.log(taras.calculateAge());
