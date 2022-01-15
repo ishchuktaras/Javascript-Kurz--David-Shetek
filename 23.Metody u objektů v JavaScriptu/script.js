@@ -1,7 +1,7 @@
 /* **************
  * Objects (Objekty)
  */
-
+// Metody u objektu = funkce
 var taras = {
     firstName: 'Taras',
     secondName: 'Ishchuk',
