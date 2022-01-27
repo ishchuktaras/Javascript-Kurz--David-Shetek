@@ -1,5 +1,3 @@
-var headline = document.querySelector("#heading1").textContent;
-console.log(headline);
+document.querySelector("#heading1").textContent = 'Nějaký nový text do h1';
 
-var paragraph = document.querySelector("#paragraph1").textContent;
-console.log(paragraph);
+document.querySelector("#paragraph1").textContent = "Nějaký nový text do odstavce";
