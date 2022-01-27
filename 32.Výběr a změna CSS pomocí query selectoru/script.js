@@ -1,1 +1,1 @@
-document.querySelector("h1").style.fontSize="50px";
+document.querySelector("h1").style.fontWeight = 300;
