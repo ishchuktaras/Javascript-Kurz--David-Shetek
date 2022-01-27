@@ -1,5 +1,3 @@
-var mojeTridy = document.getElementsByClassName("prvni");
+var mojeId = document.getElementById("prvni");
 
-for (var i = 0; i < mojeTridy.length; i++){
-	console.log(mojeTridy[i].textContent);
-}
+	console.log(mojeId.textContent);
