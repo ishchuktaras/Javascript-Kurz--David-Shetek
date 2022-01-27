@@ -1,4 +1,5 @@
 var text = document.querySelectorAll("p");
-console.log(text[0].textContent);
-console.log(text[1].textContent);
-console.log(text[2].textContent);
+
+for (var i = 0; i < 3; i++){
+	console.log(text[i].textContent);
+}
