@@ -1,5 +1,5 @@
-var newSpan = document.createElement("span");
+var newOdstavec = document.createElement("p");
 
 var myH1 = document.querySelector("h1");
 
-myH1.appendChild(newSpan,myH1);
+myH1.appendChild(newOdstavec,myH1);
