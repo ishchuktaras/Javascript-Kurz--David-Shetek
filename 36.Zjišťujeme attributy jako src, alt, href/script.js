@@ -1,7 +1,5 @@
-// textContent VS innerHTML
+var text1 = document.querySelector("a").hasAttribute("href");
+	console.log(text1);
 
-var text = document.querySelector("p").textContent;
-console.log(text);
-
-var html = document.querySelector("p").innerHTML;
-console.log(html);
+console.log(document.querySelector("img").src);
+console.log(document.querySelector("img").alt);
