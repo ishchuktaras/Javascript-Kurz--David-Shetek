@@ -4,4 +4,6 @@
 function welcome (){
 	console.log("Vítejte u nás");
 }
-welcome();
+// welcome();
+
+document.querySelector("h1").addEventListener("click",welcome);
