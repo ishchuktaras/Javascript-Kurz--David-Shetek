@@ -1,3 +1,3 @@
-document.body.addEventListener("keyup", function(){
-	console.log("Klávesa byla stisknuta");
+document.body.addEventListener("keyup", function(event){
+	console.log(event.key);
 });
