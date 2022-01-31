@@ -29,7 +29,7 @@
 	font-weight: bold;
 }
 
-.totalScore p:nth-of-type(2) {
+.totalScore p:nth-child(2) {
 	font-size: 30px;
 	text-align: center;
 }
@@ -40,5 +40,33 @@
 
 .totalScore1 {
 	right: 10%
+}
+
+/* Current score */
+
+.currentScore {
+	position: absolute;
+	top: 40%;
+	width: 150px;
+	height: 150px;
+	background: rgba(220, 20, 60, 0.7);
+}
+
+.currentScore p {
+	font-size: 20px;
+	color: whitesmoke;
+	text-align: center;
+	padding: 15px;
+}
+
+.currentScore p:nth-child(2) {
+	font-size: 30px;
+}
+.currentScore0 {
+	left: 10%;
+}
+
+.currentScore1 {
+	right: 10%;
 }
  
