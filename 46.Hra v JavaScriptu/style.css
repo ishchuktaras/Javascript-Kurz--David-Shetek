@@ -6,7 +6,7 @@
 /* Whole page*/
 
 .wholePage {
-	background: linear-gradient(green, lightgreen);
+	background: linear-gradient(rgba(38, 161, 38, 0.8), lightgreen);
 	height: 100vh;
 }
 
@@ -14,7 +14,7 @@
 .playground {
 	width: 80%;
 	height: 80%;
-	background: darkgray;
+	background: rgb(158, 92, 92);
 	position: absolute;
 	top: 10%;
 	left: 10%;
