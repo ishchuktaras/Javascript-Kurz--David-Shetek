@@ -13,3 +13,12 @@ document.getElementById('currentScore-0').textContent = 0;
 document.getElementById('currentScore-1').textContent = 0;
 
 document.querySelector('.diceImage').style.display = 'none';
+
+document.querySelector('.rollDice').addEventListener('click', function(){
+  // Generování náhodné čislo mezi 1 a 6
+  var dice = Math.ceil(Math.random()*6);
+  // Zobrazít správný obrázek
+  var diceElement = document.querySelector('.diceImage');
+  diceElement.style.display = 'block';
+  console.log(diceElement.src = 'images/' + dice + '.jpg');
+});
