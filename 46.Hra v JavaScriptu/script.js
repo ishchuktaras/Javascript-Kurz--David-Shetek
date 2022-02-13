@@ -27,13 +27,13 @@ document.querySelector('.rollDice').addEventListener('click', function () {
   // Nasčítáme čislá z kostky
   if (dice !== 1) {
     roundScore = roundScore + dice;
-    document.getElementById('currentScore-0').textContent = roundScore;
+    document.getElementById('currentScore-' + activePlayer).textContent = roundScore;
   } else {
     // Přepínání hráčů a zvýraznění aktuálního hráče
     nextPleyer();
   }
   roundScore = roundScore + dice;
-  document.getElementById('currentScore-0').textContent = roundScore;
+  document.getElementById('currentScore-' + activePlayer).textContent = roundScore;
 });
 function nextPleyer() {
   if (activePlayer === 0) {
@@ -42,15 +42,31 @@ function nextPleyer() {
     activePlayer = 0
   }
   roundScore = 0;
-document.getElementById('currentScore-0').textContent = 0;
-document.getElementById('currentScore-1').textContent = 0;
+  document.getElementById('currentScore-0').textContent = 0;
+  document.getElementById('currentScore-1').textContent = 0;
 
-document.querySelector('.diceImage').style.display = 'none';
+  document.querySelector('.diceImage').style.display = 'none';
 
-document.querySelector('.totalScore0').classList.toggle('active');
-document.querySelector('.totalScore1').classList.toggle('active');
-
+  document.querySelector('.totalScore0').classList.toggle('active');
+  document.querySelector('.totalScore1').classList.toggle('active');
 }
+
+// Hráči si mohou podržet své skóre
+
+document.querySelector('.holdScore').addEventListener('click', function () {
+  // Celkové score se vyplní současným score
+  totalScore[activePlayer] = totalScore[activePlayer] + roundScore;
+  //
+  document.getElementById('totalScorePlayer-' + activePlayer).textContent = totalScore[activePlayer];
+
+  if (totalScore[activePlayer] >= 100) {
+    document.getElementById('name-' + activePlayer).textContent = 'Vítěz! Vítěz!';
+    document.querySelector('.diceImage').style.display = 'none';
+  } else {
+    nextPleyer();
+  }
+
+});
 
 
 
