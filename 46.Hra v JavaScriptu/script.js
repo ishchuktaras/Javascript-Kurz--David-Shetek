@@ -1,18 +1,31 @@
 // Základní proměnné
-
 var totalScore, roundScore, activePlayer, dice, diceElement;
-totalScore = [0, 0];
-roundScore = 0;
-activePlayer = 0;
 
-// Vynulování a odstraněni kostky
+newStart();
 
-document.getElementById('totalScorePlayer-0').textContent = 0;
-document.getElementById('totalScorePlayer-1').textContent = 0;
-document.getElementById('currentScore-0').textContent = 0;
-document.getElementById('currentScore-1').textContent = 0;
+function newStart() {
+  totalScore = [0, 0];
+  roundScore = 0;
+  activePlayer = 0;
 
-document.querySelector('.diceImage').style.display = 'none';
+  // Vynulování a odstraněni kostky
+  document.getElementById('totalScorePlayer-0').textContent = 0;
+  document.getElementById('totalScorePlayer-1').textContent = 0;
+  document.getElementById('currentScore-0').textContent = 0;
+  document.getElementById('currentScore-1').textContent = 0;
+
+  // Skrytí kostky
+  document.querySelector('.diceImage').style.display = 'none';
+
+  // Texty do původního stávu
+  document.getElementById('name-0').textContent = 'Score 1. Hráče';
+  document.getElementById('name-1').textContent = 'Score 2. Hráče';
+
+  // Vrácení zvýraznění aktivního hráče k prvnímu a odstránění u druhého
+  document.querySelector('.totalScore0').classList.add('active');
+  document.querySelector('.totalScore1').classList.remove('active');
+
+}
 
 document.querySelector('.rollDice').addEventListener('click', function () {
 
@@ -52,8 +65,8 @@ function nextPleyer() {
 }
 
 // Hráči si mohou podržet své skóre
-
 document.querySelector('.holdScore').addEventListener('click', function () {
+
   // Celkové score se vyplní současným score
   totalScore[activePlayer] = totalScore[activePlayer] + roundScore;
   //
@@ -67,6 +80,8 @@ document.querySelector('.holdScore').addEventListener('click', function () {
   }
 
 });
+
+document.querySelector('.newGame').addEventListener('click', newStart);
 
 
 
