@@ -93,3 +93,11 @@
 	 border: rgba(220, 20, 60, 0.4);
 	 background: rgba(220, 20, 60, 0.4);
  }
+
+ /* Dice */
+
+ .dice {
+	 position: absolute;
+	 top: 30%;
+	 left: 40%;
+ }
