@@ -1,6 +1,9 @@
 // Základní proměnné
 
 var totalScore, roundScore, activePlayer, dice;
+totalScore = [0,0];
+roundScore = 0;
+activePlayer = 0;
 
 // Vynulování a odstraněni kostky
 
