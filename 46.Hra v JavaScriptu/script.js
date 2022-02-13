@@ -29,9 +29,28 @@ document.querySelector('.rollDice').addEventListener('click', function () {
     roundScore = roundScore + dice;
     document.getElementById('currentScore-0').textContent = roundScore;
   } else {
-    // Bude hrát další hráč
+    // Přepínání hráčů a zvýraznění aktuálního hráče
+    nextPleyer();
   }
   roundScore = roundScore + dice;
   document.getElementById('currentScore-0').textContent = roundScore;
 });
+function nextPleyer() {
+  if (activePlayer === 0) {
+    activePlayer = 1;
+  } else {
+    activePlayer = 0
+  }
+  roundScore = 0;
+document.getElementById('currentScore-0').textContent = 0;
+document.getElementById('currentScore-1').textContent = 0;
+
+document.querySelector('.diceImage').style.display = 'none';
+
+document.querySelector('.totalScore0').classList.toggle('active');
+document.querySelector('.totalScore1').classList.toggle('active');
+
+}
+
+
 

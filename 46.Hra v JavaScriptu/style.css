@@ -105,3 +105,14 @@
 	.diceImage {
 		border-radius: 15px;
 	}
+
+	/* Active Player */
+	
+	.active {
+		color: white;
+		padding: 8px;
+		border: solid 1px white;
+		border-radius: 8px;
+		background: rgba(0, 0, 0, 0.7);
+
+	}
