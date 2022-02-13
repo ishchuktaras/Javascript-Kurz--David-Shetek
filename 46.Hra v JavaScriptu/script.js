@@ -1,3 +1,7 @@
+// Základní proměnné
+
+var totalScore, roundScore, activePlayer, dice;
+
 // Vynulování a odstraněni kostky
 
 document.getElementById('totalScorePlayer-0').textContent = 0;
