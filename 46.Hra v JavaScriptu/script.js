@@ -1,5 +1,5 @@
 // Základní proměnné
-var totalScore, roundScore, activePlayer, dice, diceElement;
+var totalScore, roundScore, activePlayer, dice, diceElement, playGame;
 
 newStart();
 
@@ -7,6 +7,7 @@ function newStart() {
   totalScore = [0, 0];
   roundScore = 0;
   activePlayer = 0;
+  playGame = true;
 
   // Vynulování a odstraněni kostky
   document.getElementById('totalScorePlayer-0').textContent = 0;
@@ -26,28 +27,28 @@ function newStart() {
   document.querySelector('.totalScore1').classList.remove('active');
 
 }
-
+// Měníme obrázek kostky podle náhodného čísla
 document.querySelector('.rollDice').addEventListener('click', function () {
+  if (playGame) {
+    // Generování náhodné čislo mezi 1 a 6
+    dice = Math.ceil(Math.random() * 6);
 
-  // Generování náhodné čislo mezi 1 a 6
-  dice = Math.ceil(Math.random() * 6);
+    // Zobrazít správný obrázek
+    diceElement = document.querySelector('.diceImage');
+    diceElement.style.display = 'block';
+    console.log(diceElement.src = 'images/' + dice + '.jpg');
 
-  // Zobrazít správný obrázek
-  diceElement = document.querySelector('.diceImage');
-  diceElement.style.display = 'block';
-  console.log(diceElement.src = 'images/' + dice + '.jpg');
-
-  // Nasčítáme čislá z kostky
-  if (dice !== 1) {
-    roundScore = roundScore + dice;
-    document.getElementById('currentScore-' + activePlayer).textContent = roundScore;
-  } else {
-    // Přepínání hráčů a zvýraznění aktuálního hráče
-    nextPleyer();
+    // Nasčítáme čislá z kostky
+    if (dice !== 1) {
+      roundScore = roundScore + dice;
+      document.getElementById('currentScore-' + activePlayer).textContent = roundScore;
+    } else {
+      // Přepínání hráčů a zvýraznění aktuálního hráče
+      nextPleyer();
+    }
   }
-  roundScore = roundScore + dice;
-  document.getElementById('currentScore-' + activePlayer).textContent = roundScore;
 });
+
 function nextPleyer() {
   if (activePlayer === 0) {
     activePlayer = 1;
@@ -66,19 +67,20 @@ function nextPleyer() {
 
 // Hráči si mohou podržet své skóre
 document.querySelector('.holdScore').addEventListener('click', function () {
+  if (playGame) {
+    // Celkové score se vyplní současným score
+    totalScore[activePlayer] = totalScore[activePlayer] + roundScore;
+    //
+    document.getElementById('totalScorePlayer-' + activePlayer).textContent = totalScore[activePlayer];
 
-  // Celkové score se vyplní současným score
-  totalScore[activePlayer] = totalScore[activePlayer] + roundScore;
-  //
-  document.getElementById('totalScorePlayer-' + activePlayer).textContent = totalScore[activePlayer];
-
-  if (totalScore[activePlayer] >= 100) {
-    document.getElementById('name-' + activePlayer).textContent = 'Vítěz! Vítěz!';
-    document.querySelector('.diceImage').style.display = 'none';
-  } else {
-    nextPleyer();
+    if (totalScore[activePlayer] >= 100) {
+      document.getElementById('name-' + activePlayer).textContent = 'Vítěz! Vítěz!';
+      document.querySelector('.diceImage').style.display = 'none';
+      playGame = false;
+    } else {
+      nextPleyer();
+    }
   }
-
 });
 
 document.querySelector('.newGame').addEventListener('click', newStart);
