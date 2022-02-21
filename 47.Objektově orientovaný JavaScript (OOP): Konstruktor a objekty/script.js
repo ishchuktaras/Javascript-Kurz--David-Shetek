@@ -29,6 +29,13 @@ var Person = function(name,yearBirth,job){
 }
 
 var taras = new Person ('Taras', '1981', 'programátor');
+var marta = new Person ('Marta', '1991', 'prodavačka');
 
 
 console.log(taras.name);
+console.log(taras.yearBirth);
+console.log(taras.job);
+
+console.log(marta.name);
+console.log(marta.yearBirth);
+console.log(marta.job);
