@@ -11,7 +11,7 @@ var Person = function(name,yearBirth,job){
   this.job = job;
   // Metoda
   this.calcAge = function(){
-    console.log( 2022 - this.yearBirth);
+    return ( 2022 - this.yearBirth);
   }
 }
 
@@ -22,9 +22,9 @@ var marta = new Person ('Marta', '1991', 'prodavačka');
 console.log(taras.name);
 console.log(taras.yearBirth);
 console.log(taras.job);
-taras.calcAge();
+console.log(taras.calcAge());
 
 console.log(marta.name);
 console.log(marta.yearBirth);
 console.log(marta.job);
-marta.calcAge();
+console.log (marta.calcAge());
