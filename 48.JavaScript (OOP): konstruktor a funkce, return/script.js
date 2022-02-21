@@ -5,9 +5,11 @@
 // Tvorba objektu s konstruktorem
 
 var Person = function(name,yearBirth,job){
+  // Atributy
   this.name = name;
   this.yearBirth = yearBirth;
   this.job = job;
+  // Metoda
   this.calcAge = function(){
     console.log( 2022 - this.yearBirth);
   }
