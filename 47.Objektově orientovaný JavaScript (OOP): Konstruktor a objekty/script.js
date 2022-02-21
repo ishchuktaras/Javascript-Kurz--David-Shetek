@@ -1,6 +1,9 @@
 // OOP Objektově orientované programování JavaScript (OOP)
+// Atribut - vlastnosti nebo data
+// Metoda - schopnosti
 
 // Tvorba objektu bez konstruktoru
+
 
 var taras = {
   name: 'Taras',
