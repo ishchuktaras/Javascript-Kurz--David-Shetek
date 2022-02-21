@@ -22,5 +22,5 @@ Person.prototype.calcAge = function(){
 var taras = new Person ('Taras', '1981', 'programátor');
 var marta = new Person ('Marta', '1991', 'prodavačka');
 
-console.log(taras.calcAge());
-console.log(marta.calcAge());
+console.log(taras);
+console.log(marta);
